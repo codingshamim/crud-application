@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <div class="flex justify-between items-center">
+        <h1 class="text-xl font-bold">Create User</h1>
+      
+    </div>
+    <div role="alert" class="alert alert-success mt-5 modalbox hidden">
+        
+        <span class="modalText"></span>
+      </div>
+    <form class="card-body" id="form">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Name</span>
+          </label>
+          <input type="text" placeholder="Name" class="input input-bordered"  name="username" required />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Email</span>
+          </label>
+          <input type="text" name="email" placeholder="Email" class="input input-bordered" required />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Password</span>
+          </label>
+          <input type="password" name="password" placeholder="Password" class="input input-bordered" required />
+         
+        </div>
+        <div class="form-control mt-6">
+          <button class="btn btn-primary submit-btn">Add User</button>
+        </div>
+      </form>
+  </div>
+</dialog>
+<dialog id="my_modal_2" class="modal">
+  <div class="modal-box">
+    <div class="flex justify-between items-center">
+        <h1 class="text-xl font-bold">Update User</h1>
+      
+    </div>
+    <div role="alert" class="alert alert-success mt-5 modalbox2 hidden">
+        
+        <span class="modalText2"></span>
+      </div>
+    <form class="card-body" id="form2">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Name</span>
+          </label>
+          <input type="text" placeholder="Name" class="input input-bordered"  id="username" required name="updatename"/>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Email</span>
+          </label>
+          <input type="text" id="email" placeholder="Email" class="input input-bordered" required name="updateemail"/>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Password</span>
+          </label>
+          <input type="password" id="password" placeholder="Password" class="input input-bordered" required name="updatepassword"/>
+          <input type="hidden" id="findId" class="input input-bordered" name="findId"/>
+         
+        </div>
+        <div class="form-control mt-6">
+          <button class="btn btn-primary submit-btn submit-btn-2">Update User</button>
+        </div>
+      </form>
+  </div>
+</dialog>
+    <div class="container w-[1000px] mx-auto">
+        <button class="btn btn-primary mt-5" onclick="my_modal_1.showModal()">Add User</button>
+        <div class="overflow-x-auto">
+            <table class="table">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody class="append">
+                <!-- row 1 -->
+             
+              
+              </tbody>
+            </table>
+          </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
